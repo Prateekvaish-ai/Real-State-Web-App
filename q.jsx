@@ -5,18 +5,16 @@ import { useFormik } from 'formik'
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const Addproperty = () => {
+const Addbusiness = () => {
   // initializing formik
-  const propertyForm = useFormik({
+  const businessForm = useFormik({
     initialValues: {
       name: '',
       address: '',
       category: '',
-      area: '',
+      timing: '',
       contact: '',
       image: '',
-      price: '',
-      owner: ''
     },
     onSubmit: (values, { resetForm, setSubmitting }) => {
 
@@ -26,14 +24,14 @@ const Addproperty = () => {
       //}, 2000);
 
       //fetch
-      axios.post('http://localhost:5000/property/add', values)
+      axios.post('http://localhost:5000/business/add', values)
         .then((result) => {
-          toast.success('Property registered successfully');
+          toast.success('Business registered successfully');
           resetForm();
           // router.push('/login');
         }).catch((err) => {
           console.log(err);
-          toast.error('Property registration failed');
+          toast.error('Business registration failed');
           setSubmitting(false);
 
         });
@@ -55,7 +53,7 @@ const Addproperty = () => {
     if (res.status === 200) {
       console.log(res.data);
       toast.success('Image uploaded successfully');
-      propertyForm.setFieldValue('image', res.data.url);
+      businessForm.setFieldValue('image', res.data.url);
     }
   }
 
@@ -67,12 +65,12 @@ const Addproperty = () => {
           {/* text - start */}
           <div className="mb-10 md:mb-16">
             <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-              Add Property
+              Add Business
             </h2>
           </div>
           {/* text - end */}
           {/* form - start */}
-          <form onSubmit={propertyForm.handleSubmit} className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
+          <form onSubmit={businessForm.handleSubmit} className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
             <div>
               <label
                 htmlFor="Name"
@@ -83,38 +81,8 @@ const Addproperty = () => {
               <input
                 type="text"
                 name="name"
-                onChange={propertyForm.handleChange}
-                value={propertyForm.values.name}
-                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="Price"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
-              >
-                Price
-              </label>
-              <input
-                type="text"
-                name="price"
-                onChange={propertyForm.handleChange}
-                value={propertyForm.values.price}
-                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-              />
-            </div>
-            <div className="sm:col-span-2">
-              <label
-                htmlFor="category"
-                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
-              >
-                Category
-              </label>
-              <input
-                type="text"
-                name="category"
-                onChange={propertyForm.handleChange}
-                value={propertyForm.values.category}
+                onChange={businessForm.handleChange}
+                value={businessForm.values.name}
                 className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
             </div>
@@ -128,23 +96,38 @@ const Addproperty = () => {
               <input
                 type="text"
                 name="address"
-                onChange={propertyForm.handleChange}
-                value={propertyForm.values.address}
+                onChange={businessForm.handleChange}
+                value={businessForm.values.address}
                 className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
             </div>
-            <div>
+            <div className="sm:col-span-2">
               <label
-                htmlFor="owner"
+                htmlFor="category"
                 className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
               >
-                Owner
+                Category
               </label>
               <input
                 type="text"
-                name="owner"
-                onChange={propertyForm.handleChange}
-                value={propertyForm.values.owner}
+                name="category"
+                onChange={businessForm.handleChange}
+                value={businessForm.values.category}
+                className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              />
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="timing"
+                className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >
+                Timing
+              </label>
+              <input
+                type="text"
+                name="timing"
+                onChange={businessForm.handleChange}
+                value={businessForm.values.timing}
                 className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
             </div>
@@ -158,8 +141,8 @@ const Addproperty = () => {
               <input
                 type="text"
                 name="contact"
-                onChange={propertyForm.handleChange}
-                value={propertyForm.values.contact}
+                onChange={businessForm.handleChange}
+                value={businessForm.values.contact}
                 className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
               />
             </div>
@@ -194,10 +177,10 @@ const Addproperty = () => {
             </p>
             <button
               type="submit"
-              disabled={propertyForm.isSubmitting}
+              disabled={businessForm.isSubmitting}
               className="flex sm:col-span-2 w-1/2 mx-auto items-center gap-3 w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
             >
-              {propertyForm.isSubmitting ? (<IconLoader3 className='animate-spin' />) : (<IconCheck />)}
+              {businessForm.isSubmitting ? (<IconLoader3 className='animate-spin' />) : (<IconCheck />)}
               Submit
             </button>
           </form>
@@ -209,4 +192,4 @@ const Addproperty = () => {
   )
 }
 
-export default Addproperty;
+export default Addbusiness;

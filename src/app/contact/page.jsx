@@ -6,91 +6,134 @@ const Contact = () => {
   
   return (
     <div >
-      <section className="text-gray-400 bg-gray-900 body-font relative">
-  <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-    <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-    <iframe
-  src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3504.5148064990226!2d77.3556!3d28.5543!3m2!1i1024!2i768!4f13.1!2m1!1sshop%20no.%205%2C%20East%20sapphire%20society%20sector%2045%20Noida%20%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1734519114342!5m2!1sen!2sin"
-  width="100%"
-  height="100%"
-  title="map"
-  className="absolute inset-0"
-  frameBorder={0}
-  marginHeight={0}
-  marginWidth={0}
-  scrolling="no"
-  // style={{ filter: "grayscale(1) contrast(1.2) opacity(0.16) "}}
-/>
-
-      <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
-        <div className="lg:w-1/2 px-6">
-          <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-            ADDRESS
-          </h2>
-          <p className="mt-1">
-            Shop No.5, Eash Sapphire Society Sector 45 
-            Noida, Uttar Pradesh 201301
-          </p>
-        </div>
-        <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-          <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-            EMAIL
-          </h2>
-          <Link className="text-indigo-400 leading-relaxed" href="gmail">prateekvaish449@gmail.com</Link>
-          <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-            PHONE
-          </h2>
-          <p className="leading-relaxed">6394195811</p>
-        </div>
-      </div>
-    </div>
-    <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-      <h2 className="text-white text-lg mb-1 font-medium title-font">
-        Feedback
+      <>
+  {/* Contact */}
+  <div className="max-w-7xl px-4 lg:px-6 lg:px-8 py-12 lg:py-24 mx-auto">
+    <div className="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
+      <h2 className="font-medium text-black text-2xl sm:text-4xl font-bold">
+        Contact
       </h2>
-      
-      <div className="relative mb-4">
-        <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12">
+      <div className="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden bg-gray-100 rounded-2xl ">
+        <img
+          className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
+          src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Contacts Image"
         />
       </div>
-      <div className="relative mb-4">
-        <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-        />
+      {/* End Col */}
+      <div className="space-y-8 lg:space-y-16">
+        <div>
+          <h3 className="mb-5 font-semibold text-black">
+            Our address
+          </h3>
+          {/* Grid */}
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+            <div className="flex gap-4">
+              <svg
+                className="shrink-0 size-5 text-gray-500 dark:text-neutral-500"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx={12} cy={10} r={3} />
+              </svg>
+              <div className="grow">
+                <p className="text-sm text-gray-600 dark:text-neutral-400">
+                   shop No. 5, East Sapphire Society
+                </p>
+                <address className="mt-1 text-black not-italic">
+                  Sector 45 Noida
+                  <br />
+                  Noida, Uttar Pradesh 201301
+                </address>
+              </div>
+            </div>
+          </div>
+          {/* End Grid */}
+        </div>
+        <div>
+          <h3 className="mb-5 font-semibold text-black ">
+            Our contacts
+          </h3>
+          {/* Grid */}
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+            <div className="flex gap-4">
+              <svg
+                className="shrink-0 size-5 text-gray-500 dark:text-neutral-500"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
+                <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
+              </svg>
+              <div className="grow">
+                <p className="text-sm text-gray-600 dark:text-neutral-400">
+                  Email us
+                </p>
+                <p>
+                  <Link
+                    className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black "
+                    href="mailto:prateekvaish449@gmail.com"
+                  >
+                   prateekvaish449@gmail.com
+                  </Link>
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <svg
+                className="shrink-0 size-5 text-gray-500 dark:text-neutral-500"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <div className="grow">
+                <p className="text-sm text-gray-600 dark:text-neutral-400">
+                  Call us
+                </p>
+                <p>
+                  <a
+                    className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black "
+                    href="mailto:example@site.so"
+                  >
+                    +91 6394195811
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* End Grid */}
+        </div>
       </div>
-      <div className="relative mb-4">
-        <label htmlFor="message" className="leading-7 text-sm text-gray-400">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-          defaultValue={""}
-        />
-      </div>
-      <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-        Button
-      </button>
-      <p className="text-xs text-gray-400 text-opacity-90 mt-3">
-        Keep in touch.
-      </p>
+      {/* End Col */}
     </div>
   </div>
-</section>
+  {/* End Contact */}
+</>
 
 
 

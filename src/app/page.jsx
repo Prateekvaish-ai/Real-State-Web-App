@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
       <section className="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
         {/* image - start */}
         <img
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb3BlcnR5fGVufDB8fDB8fHww"
+          src="https://u.realgeeks.media/glasgowrealtygroup/shutterstock_1709893657.jpeg"
           loading=" "
           alt=" "
           className="absolute inset-0 h-full w-full object-cover object-center"
@@ -25,25 +26,28 @@ const Home = () => {
         {/* overlay - end */}
         {/* text start */}
         <div className="relative flex flex-col items-center p-4 sm:max-w-xl">
-          <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">
-            Very proud to introduce
+          <p className="mb-4 text-center text-lg text-sky-400 font-bold sm:text-xl md:mb-8">
+            Let us find your
           </p>
           <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">
-            Revolutionary way to build the web
+            Forever Home.
           </h1>
+          <p className='mb-2 text-center text-lg text-white '>
+            Welcome to our home listings designed for you. Explore to find your perfect match. we're here to make finding your dream home a smooth, enjoyable experience.
+          </p>
           <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
-            <a
-              href="#"
-              className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+            <Link
+              href="browse-property"
+              className="inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base"
             >
-              Start now
-            </a>
-            <a
-              href="#"
+               Get Start 
+            </Link>
+            <Link
+              href="about"
               className="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
             >
-              Take tour
-            </a>
+              LEARN MORE
+            </Link>
           </div>
         </div>
         {/* text end */}
@@ -55,7 +59,7 @@ const Home = () => {
   <div className="bg-white py-6 sm:py-8 lg:py-12">
     <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
       <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">
-        Gallery
+       Property Gallery
       </h2>
       <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
         {/* image - start */}

@@ -8,14 +8,14 @@ const ViewProperty = () => {
   const { id } = useParams();
   const [propertyDetails, setPropertyDetails] = useState(null);
 
-  const fetchPropertyData = async () => {
+  const fetchProductData = async () => {
     const res = await axios.get('http://localhost:5000/property/getbyid/' + id);
     console.log(res.data);
     setPropertyDetails(res.data);
   }
 
   useEffect(() => {
-    fetchPropertyData();
+    fetchProductData();
   }, []);
 
   if (propertyDetails === null) {

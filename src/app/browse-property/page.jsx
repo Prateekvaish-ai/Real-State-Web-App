@@ -43,7 +43,7 @@ const BrowseProperties = () => {
           {/* text - start */}
           <div className="mb-10 md:mb-16">
             <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-              Property
+             Browse Property
             </h2>
             
           </div>

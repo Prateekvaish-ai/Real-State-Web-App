@@ -95,7 +95,7 @@ const Navbar = () => {
           </Link>
           <Link
             className="p-2 flex items-center text-sm text-white/80 hover:text-white focus:outline-none focus:text-white"
-            href="view-property\id"
+            href="manage-property"
           >
             <svg
               className="shrink-0 size-4 me-3 md:me-2 block md:hidden"
@@ -112,7 +112,7 @@ const Navbar = () => {
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
               <circle cx={12} cy={7} r={4} />
             </svg>
-            View Property
+             Manage Property
           </Link>
           
           {/* Button Group */}

@@ -29,7 +29,7 @@ const Addproperty = () => {
         .then((result) => {
           toast.success('Property registered successfully');
           resetForm();
-          router.push('/login');
+          // router.push('/login');
         }).catch((err) => {
           console.log(err);
           toast.error('Property registration failed');
